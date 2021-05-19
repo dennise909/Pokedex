@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!-- Required meta tags -->
+    
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <!-- Google Font 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   -->
+    <link rel="stylesheet" href="./Restaurant search_files/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="./Restaurant search_files/css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./Restaurant search_files/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./Restaurant search_files/project7.css">
+    <title>Restaurant search</title>
+
+<script type="text/javascript" charset="UTF-8" src="./Restaurant search_files/common.js"></script><script type="text/javascript" charset="UTF-8" src="./Restaurant search_files/util.js"></script></head>
+
+<body data-gr-c-s-loaded="true">
+    <!--/header-->
+    <div id="nav-bar" class="container-fluid nav-bar"> 
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link active" href="http://127.0.0.1:5500/index.html#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:5500/index.html#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:5500/index.html#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="http://127.0.0.1:5500/index.html#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+        </ul>
+    </div>
+    <!--/map-->
+    <div class="container-fluid">
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">×</span>
+              <p>Some text in the Modal..</p>
+            </div>
+          
+          </div>
+        <div class="row">
+            <div class="col-lg-8" id="map"></div>
+            <div class="col-lg-4" id="restaurantlist" style="width:571px; height: 674px; overflow-y: scroll; float: right; right: 0;">
+                <div class="row">
+                    <div class="container-fluid h-100">
+                        <div class="d-flex justify-content-center h-100">
+                            <!--<div class="searchbar">
+                                <input class="search_input" type="text" name="" placeholder="Search for restaurant..">
+                                <a href="#" class="search_icon"><i class="fas fa-search-location"></i></a>
+                            </div>-->
+                            <div class="dropdown">
+                                <button class="dropbtn">Search by Rating</button>
+                                <div class="dropdown-content">
+                                    <a href="http://127.0.0.1:5500/index.html#">2.0 - 2.9
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                    </a>
+                                    <a href="http://127.0.0.1:5500/index.html#">3.0 - 3.9
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                    </a>
+                                    <a href="http://127.0.0.1:5500/index.html#">4.0 - 5 +
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card">
+                        <div class="card-horizontal">
+                            <div class="">
+                                <img class="img-square-wrapper" src="./Restaurant search_files/Mexicano-3-1400x600.jpg" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title text-center h5">Card title</h2>
+                                <p class="card-text text-justify">Some quick example text to build on the card
+                                    title and make up the
+                                    bulk of the card's content.</p>
+                                <span> Rating:</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <button type="button" class="btn btn-danger">Add review</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card">
+                        <div class="card-horizontal">
+                            <div class="">
+                                <img class="img-square-wrapper" src="./Restaurant search_files/Mexicano-3-1400x600.jpg" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title text-center h5">Card title</h2>
+                                <p class="card-text text-justify">Some quick example text to build on the card
+                                    title and make up the bulk of the card's content.</p>
+                                <span> Rating:</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <button type="button" class="btn btn-danger">Add review</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card">
+                        <div class="card-horizontal">
+                            <div class="">
+                                <img class="img-square-wrapper" src="./Restaurant search_files/Mexicano-3-1400x600.jpg" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title text-center h5">Card title</h2>
+                                <p class="card-text text-justify">Some quick example text to build on the card
+                                    title and make up
+                                    the bulk of the card's content.</p>
+                                <span> Rating:</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <button type="button" class="btn btn-danger">Add review</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card">
+                        <div class="card-horizontal">
+                            <div class="">
+                                <img class="img-square-wrapper" src="./Restaurant search_files/Mexicano-3-1400x600.jpg" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title text-center h5">Card title</h2>
+                                <p class="card-text text-justify">Some quick example text to build on the card title and
+                                    make up
+                                    the
+                                    bulk of the card's content.</p>
+                                <span> Rating:</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <button type="button" class="btn btn-danger">Add review</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card">
+                        <div class="card-horizontal">
+                            <div class="">
+                                <img class="img-square-wrapper" src="./Restaurant search_files/Mexicano-3-1400x600.jpg" alt="Card image cap">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title text-center h5">Card title</h2>
+                                <p class="card-text text-justify">Some quick example text to build on the card
+                                    title and make up
+                                    the
+                                    bulk of the card's content.</p>
+                                <span> Rating:</span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <button type="button" class="btn btn-danger">Add review</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./Restaurant search_files/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="./Restaurant search_files/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="./Restaurant search_files/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./Restaurant search_files/js" async="" defer=""></script>&gt;
+    <!-- Custom scripts for this template -->
+    <script type="text/javascript" src="./Restaurant search_files/project7.js"></script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
