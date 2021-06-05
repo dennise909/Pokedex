@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Pokegame from './Pokegame';
 import './App.css';
-import APIcall from './APIcall';
+import APIcall from './pokelist';
 
 class App extends Component {
   render(){
