@@ -1,4 +1,8 @@
-import React, { useState, useEffect } from 'react';
+//import React, { useState, useEffect } from 'react';
+const spaceId = '9ibhbvc9100k'
+const accessToken = 'fzIK99bFxOEYWVXcnbkW7u65zlrZSKbx7twE3IGy91Y'
+//const accessToken = 'JFErxP7il5J5U32XfxkiWCtSg2XRj0izTLnyNYaWtkg'
+const environment = 'master'
 
 const query = `
 query{
@@ -15,29 +19,24 @@ query{
 
 `;
 
-function APIcall() {
-    let [data,setData] = useState(null);
+async function getpokemonList() {
+  return await (
+    window
+      .fetch(`https://graphql.contentful.com/content/v1/spaces/${spaceId}/environments/${environment}?access_token=${accessToken}`,
+          {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ query }),
+          }
+  
+      )
+      .then((response) => response.json())
+      .then((json) => {return json.data})
+      .catch(() => {console.log("no data available")})
+  )}
+    export default getpokemonList
 
-    useEffect(() => {
-        window
-        .fetch("https://graphql.contentful.com/content/v1/spaces/9ibhbvc9100k/environments/master?access_token=fzIK99bFxOEYWVXcnbkW7u65zlrZSKbx7twE3IGy91Y",
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ query }),
-            }
-        )
-        .then((response) => response.json())
-        .then((json) => setData(json.data))
-    
-    },[]);
-    if (!data) return <span> Loading... </span>        
-        return(
-           null
-        )
+    getpokemonList()
 
-}
-
-export default APIcall
