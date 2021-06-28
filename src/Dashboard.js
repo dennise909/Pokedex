@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Modal from './Modal.js';
+import Modal from './Modal/Modal.js';
+import Myform from './Form/Form';
 
 class Dashboard extends Component {
     constructor() {
@@ -35,7 +36,9 @@ class Dashboard extends Component {
                 <button type="button" onClick={this.showModal}>
                     Create new pokemon
         </button>
-            {this.state.show && <Modal handleClose={this.hideModal}>WOW</Modal>}
+            {this.state.show && <Modal handleClose={this.hideModal}>
+            <Myform/>
+            </Modal>}
             </main>
         );
     }

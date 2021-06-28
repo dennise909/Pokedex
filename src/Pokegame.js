@@ -40,11 +40,13 @@ class Pokegame extends Component {
     render() {
         let hand1 = [];
         let hand2 = [...(this.state.pokemonCollection.items)];
-        console.log(this)
+        console.log(hand2,"im hand two")
+        console.log(hand1,"im hand one")
+        //console.log(this)
         while (hand1.length < hand2.length) {
             let randIdx = Math.floor(Math.random() * hand2.length); //gets a random number from the id's
             let randPokemon = hand2.splice(randIdx, 1)[0];// inserts a pokemon object accoardingly to the random id
-            hand1.push(randPokemon); //adds the random pokemon to the list
+            if (hand1.length <= 3) {hand1.push(randPokemon)}; //adds the random pokemon to the list
         }
 
         let exp1 = hand1.reduce((exp, pokemon) => exp + pokemon.baseExperience, 0);
