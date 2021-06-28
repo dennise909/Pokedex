@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+Technical Documentation for Pokedex App.
+ Front End developer path assessment 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Table of contents:
 
-In the project directory, you can run:
+Project Overview
+Code Structure
+Testing
+Development process
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Project Overview 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The Pokedex is an App / Card game based on Pokemon. It has been built with React App as the development environment. The game is intended to work in the following way:
+The user accesses the page and will find two card decks. Each deck contains up to 4 cards with a Pokemon on it, that specifies their type and experience. 
+Our app logic sums up all the experience of the four Pokemons and the one with the highest score wins the match.
+In order to add new Pokemons, it is necessary to create them via Contentful’s WebApp.
+You can find the whole code in the following Github repository.
 
-### `yarn test`
+Code Structure 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+File Contents
 
-### `yarn build`
+The /src folder contains all the following public files:
+App.js - 
+index.js - 
+Pokecard.js - Is a child component of the Pokedex, the props received from the parent are placed to build each pokemon card.
+Pokecard.css - Contains the styling for each card.
+Pokedex.js - Loops over the pokemons and returns the Pokecards.
+Pokegame.js - File where the winning hand has been calculated by summing up the experience of the pokemons from the card deck which is the game logic and receives the object coming from the GraphQL API.
+Pokegame.css - Contains the css to align the cards on the deck and gives the animation of the cards.
+Pokelist.js - Contains the request to Contentful’s GraphQL API, and receives the JSON with the Pokemons created through the WebApp.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Contentful WebApp
 
-### `yarn eject`
+To add new Pokemons to the game is necessary to do it via WebApp. The content type  Pokemon has been built under the Contentful Customer Success Organization in the Performance 3X space. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The content type contains 3 fields required to be fulfilled which are : id, name, type and base experience.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Development process
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Testing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For the current project the intended testing framework will be Jest. 
 
-### Code Splitting
+Parts of the code that will be tested are:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+/Pokelist.js
+API response from Contentful GraphQL
 
-### Analyzing the Bundle Size
+/Pokecard.js
+Creation of the pokecard component
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+/Pokegame.js
+Sum of the base experience from the Pokemon’s deck
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Retrospective
