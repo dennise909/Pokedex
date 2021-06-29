@@ -1,6 +1,3 @@
-Technical Documentation for Pokedex App.
- Front End developer path assessment 
-
 
 Table of contents:
 
