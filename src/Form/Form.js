@@ -1,12 +1,14 @@
 
 import React, { Component } from 'react'
 import './Form.css';
+import SelectComponent from './Select';
 
-const pockeType = [{
+
+ {/* const pokeType = [{
     value: 'fire', label: 'Fire'
 }, {
     value: 'water', label: 'Water'
-}]
+}] */}
 class MyForm extends Component {
     onSubmit() {
         alert("it works")
@@ -23,21 +25,12 @@ class MyForm extends Component {
 
 
                         <label for="name"><b>Name</b></label>
-                        <input type="text" placeholder="Enter Name" name="name" id="name" required />
+                        <input type="text" placeholder="Enter Name" name="name" id="Name" required />
 
                         <label for="id"><b>Id</b></label>
                         <input type="number" placeholder="Enter Id" name="id" id="id" required />
 
-                        <label for="type"><b>Choose a type</b></label>
-                           <select id="pokemontype" name="types">
-                            <option value="Fire">Fire</option>
-                            <option value="Water">Water</option>
-                            <option value="Flying">Flying</option>
-                            <option value="Electric">Electric</option>
-                        </select> 
-                        {/*
-                         pockeType.map((type)=><option value={type.value}>{type.label}</option>)
-                        */}
+                        <SelectComponent/>
 
                         <label for="exp"><b>Base experience</b></label>
                         <input type="number" min="0" placeholder="Experience level" name="exp" id="exp" required />
