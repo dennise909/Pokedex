@@ -1,10 +1,13 @@
 {
 	"folders": [
 		{
-			"path": "my-pokedex"
+			"path": "."
 		},
 		{
-			"path": "."
+			"path": "/Users/daniela.burgos/Documents/DevStuff/chakra-ui"
+		},
+		{
+			"path": "my-pokedex"
 		}
 	]
 }
