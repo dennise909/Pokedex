@@ -44,18 +44,7 @@ Development process
 
 Testing
 
-For the current project the intended testing framework will be Jest. 
-
-Parts of the code that will be tested are:
-
-/Pokelist.js
-API response from Contentful GraphQL
-
-/Pokecard.js
-Creation of the pokecard component
-
-/Pokegame.js
-Sum of the base experience from the Pokemon’s deck
+Still not there.... ups
 
 
 Retrospective
