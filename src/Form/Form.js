@@ -1,43 +1,61 @@
 
 import React, { Component } from 'react'
 import './Form.css';
-import SelectComponent from './Select';
+//import SelectComponent from './Select';
+import InputComponent from './Input';
 
 
- {/* const pokeType = [{
-    value: 'fire', label: 'Fire'
-}, {
-    value: 'water', label: 'Water'
-}] */}
 class MyForm extends Component {
-    onSubmit() {
-        alert("it works")
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: "",
+            id: undefined,
+            exp: undefined,
+        };
+
     }
     
+    handleChange = (evt) => {
+        this.setState({ [evt.target.name]: evt.target.value });
+    }
+    handleSubmit = (evt) => {
+        evt.preventDefault();
+        console.log(this.state)
+        this.setState({name:"",id:"",exp:""})
+
+    }
+
     render() {
         return (
             <div>
-                <form>
-                    <button class="btn"><i class="fa fa-close"></i></button>
-                    <div class="container">
+                <form onSubmit={this.handleSubmit}>
+                    <div className="container">
                         <h1>New Pokemon</h1>
                         <p>Get a new Pokemon by filling the data.</p>
-
-
-                        <label for="name"><b>Name</b></label>
-                        <input type="text" placeholder="Enter Name" name="name" id="Name" required />
-
-                        <label for="id"><b>Id</b></label>
-                        <input type="number" placeholder="Enter Id" name="id" id="id" required />
-
-                        <SelectComponent/>
-
-                        <label for="exp"><b>Base experience</b></label>
-                        <input type="number" min="0" placeholder="Experience level" name="exp" id="exp" required />
-
-                        <button type="submit" class="registerbtn" onClick ={this.onSubmit}>Add Pokemon</button>
+                        <label htmlFor="name"><b>Pokename</b></label>
+                        <input type ="text" 
+                                name = "name" 
+                                value ={this.state.username} 
+                                onChange ={this.handleChange} >                  
+                        </input>
+                        <label htmlFor="id"><b>Id</b></label>
+                        <input type="number" 
+                               name = "id" 
+                               value ={this.state.id} 
+                               onChange ={this.handleChange} >
+                        </input>
+                        <label htmlFor="exp"><b>Exp</b></label>
+                        <input type="number"
+                               name = "exp"  
+                               value ={this.state.exp} 
+                               onChange ={this.handleChange} >
+                        </input>
+                        <button type="submit" className="registerbtn" >Add Pokemon</button> 
+                        <InputComponent name = {"name"} id={"Name"} type={"text"} />
                     </div>
                 </form>
+
             </div>
         );
     }

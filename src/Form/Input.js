@@ -1,27 +1,32 @@
 import React, { Component } from 'react'
 import './Form.css';
 
-const inputList = [{
-    type: 'text', placeholder: 'Fire', name: '',id: '' 
-}, {
-    value: 'water', label: 'Water'
-},
-{
-    value: 'normal', label: 'Normal'
-}
-]
 
-class SelectComponent extends Component {
+class InputComponent extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            dataInput : undefined ,
+        };
+      }
+    
+    handleChange = (evt) => {
+        this.setState({ [evt.target.name]: evt.target.value });
+    }
     render() {
-        return(
-        <select id="pokemontype" name="types">
-            {
-                pokeType.map((type) =>
-                <option value={type.value}>{type.label}</option>)
-            }
-        </select>
-        );
+        return (<div>
+            <label htmlFor={this.props.name}><b>Exp</b></label>
+            <input type= {this.props.type}
+                name={this.props.dataInput}
+                value={this.state.name}
+                onChange={this.handleChange} 
+                autocomplete="off"
+                >
+            </input>
+        </div>
+
+
+        )
     }
 }
-
-export default SelectComponent;
+export default InputComponent;

@@ -16,13 +16,17 @@ const pokeType = [{
 
 class SelectComponent extends Component {
     render() {
-        return(
-        <select id="pokemontype" name="types">
-            {
-                pokeType.map((type) =>
-                <option value={type.value}>{type.label}</option>)
-            }
-        </select>
+        return (
+            <div>
+                <label for="pokemontype"><b>Choose a type: </b></label>
+                <select id="pokemontype" name="types">
+                    {
+                        pokeType.map((type) =>
+                            <option value={type.value} key={type.value}>{type.label}</option>
+                        )
+                    }
+                </select>
+            </div>
         );
     }
 }

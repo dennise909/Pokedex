@@ -8,8 +8,6 @@ class Dashboard extends Component {
         this.state = {
             show: false
         };
-        this.showModal = this.showModal.bind(this);
-        this.hideModal = this.hideModal.bind(this);// remove the bind as its 
     }
 
     // showModal = () => {
@@ -35,10 +33,10 @@ class Dashboard extends Component {
             <main>
                 <button type="button" onClick={this.showModal}>
                     Create new pokemon
-        </button>
-            {this.state.show && <Modal handleClose={this.hideModal}>
-            <Myform/>
-            </Modal>}
+                </button>
+                {this.state.show && <Modal handleClose={this.hideModal}>
+                    <Myform />
+                </Modal>}
             </main>
         );
     }
